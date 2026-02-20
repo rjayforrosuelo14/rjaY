@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rjay Forrosuelo | Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --primary: #6366f1;
+    --bg: #0f172a;
+    --text: #ffffff;
+    --card: rgba(255,255,255,0.08);
+}
+
+.light {
+    --bg: #f4f7fa;
+    --text: #111;
+    --card: rgba(0,0,0,0.05);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:0.3s;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+nav h3{
+    font-weight:700;
+}
+
+nav button{
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav button:hover{
+    transform:scale(1.05);
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin-bottom:20px;
+    border:4px solid var(--primary);
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.typing{
+    font-weight:600;
+    color:var(--primary);
+    min-height:28px;
+    margin-bottom:15px;
+}
+
+.resume-btn{
+    margin-top:10px;
+    padding:10px 25px;
+    border-radius:25px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.resume-btn:hover{
+    transform:translateY(-3px);
+}
+  /* PROJECTS GRID */
+.projects{
+    display:grid;
+    gap:15px;
+}
+
+@media(min-width:768px){
+    .projects{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+.project{
+    display:block;
+}
+
+/* SOCIALS */
+.socials{
+    margin-top:25px;
+}
+
+.socials a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:45px;
+    height:45px;
+    margin:0 10px;
+    border-radius:50%;
+    background:var(--card);
+    font-size:18px;
+    color:var(--text);
+    transition:0.3s;
+}
+
+.socials a:hover{
+    background:var(--primary);
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* SECTIONS */
+section{
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:15px;
+    margin:20px 0;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* SKILLS */
+.skill{
+    margin:20px 0;
+}
+
+.progress{
+    background:rgba(255,255,255,0.2);
+    height:8px;
+    border-radius:10px;
+    margin-top:5px;
+}
+
+.progress-bar{
+    height:8px;
+    width:0;
+    background:var(--primary);
+    border-radius:10px;
+    transition:2s;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Rjay.dev</h3>
+    <button onclick="toggleMode()">Toggle Mode</button>
+</nav>
+
+<div class="hero">
+    <img src="jeboy.jpg" alt="Profile Picture">
+    <h1>Rjay Forrosuelo</h1>
+    <div class="typing" id="typing"></div>
+
+  
+
+    <!-- SOCIAL ICONS -->
+    <div class="socials">
+        <!-- Gmail -->
+        <a href="mailto:rjayforrosuelo4gmail@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/rjayforrosuelo14" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/14QUFQRv3fE//" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</div>
+
+<section>
+    <div class="card">
+        <h2>Career Objective</h2>
+        <p>
+        Motivated BSIT student specializing in web development and system design. 
+        Passionate about building scalable, user-focused digital solutions and 
+        contributing to innovative IT projects.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>Technical Skills</h2>
+
+        <div class="skill">
+            HTML & CSS
+            <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+        </div>
+
+        <div class="skill">
+            JavaScript
+            <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+        </div>
+
+        <div class="skill">
+            Arduino / Embedded Systems
+            <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill">
+            MySQL / Database
+            <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+        </div>
+    </div>
+</section>
+  
+  <section>
+    <h2 style="text-align:center;margin-bottom:20px;">Projects</h2>
+
+
+    <div class="projects">
+
+        <div class="card project web">
+            <h3>Bantayan 911 System</h3>
+            <p>Centralized emergency response platform with real-time reporting and LGU coordination dashboard.</p>
+        </div>
+
+        <div class="card project hardware">
+            <h3>Arduino 7-Segment Display</h3>
+            <p>Microcontroller project demonstrating hardware integration and embedded programming logic.</p>
+        </div>
+
+        <div class="card project web">
+            <h3>Personal Portfolio Website</h3>
+            <p>Responsive web portfolio showcasing skills, animations, filtering system, and modern UI design.</p>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+
+/* Typing Animation */
+const texts = [
+"Future IT Professional",
+"Web Developer",
+"System Designer",
+"Problem Solver"
+];
+
+let count=0;
+let index=0;
+let currentText='';
+let letter='';
+
+(function type(){
+    if(count===texts.length){count=0;}
+    currentText=texts[count];
+    letter=currentText.slice(0,++index);
+    document.getElementById('typing').textContent=letter;
+
+    if(letter.length===currentText.length){
+        setTimeout(()=>{
+            index=0;
+            count++;
+        },1500);
+    }
+    setTimeout(type,100);
+})();
+
+/* Skill Animation */
+window.addEventListener("scroll",()=>{
+    document.querySelectorAll(".progress-bar").forEach(bar=>{
+        const rect=bar.getBoundingClientRect();
+        if(rect.top < window.innerHeight){
+            bar.style.width=bar.dataset.width;
+        }
+    });
+});
+</script>
+
+</body>
+</html>
